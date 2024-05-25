@@ -8,12 +8,12 @@ controller = LoanController()
 
 @router.post("/apply")
 async def submit_application(application: LoanApplication):
-    return controller.submit_application(application)
+    return await controller.submit_application(application)
 
 @router.get("/status/{application_id}")
 async def get_application_status(application_id: int):
-    return controller.get_application_status(application_id)
+    return await controller.get_application_status(application_id)
 
 @router.put("/update/{application_id}")
 async def update_application(application_id: int, updated_application: LoanApplication):
-    return controller.update_application(application_id, updated_application)
+    return await controller.update_application(application_id, updated_application)
