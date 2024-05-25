@@ -19,7 +19,7 @@ git clone <repository_url>
 Navigate to the project directory and install the Python dependencies using pip:
 
 ```bash
-cd fastapi-loan-application
+cd loan_management_vaya
 pip install -r requirements.txt
 ```
 ### 3. Run the Application
