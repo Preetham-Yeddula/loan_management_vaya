@@ -1,11 +1,12 @@
 from app.Utils.DictDataStore import DictDataStore
+from app.Utils.MongoDataStore import MongoDataStore
 from app.models.loan_application import LoanApplication
 from app.repositories.loan_repository import LoanRepository
 from app.services.risk_assessment import RiskAssessment
 
 class LoanController:
     def __init__(self):
-        self.repository = LoanRepository(data_store=DictDataStore({}))
+        self.repository = LoanRepository(data_store=MongoDataStore("loan_db", "loan_applications"))
         self.risk_assessment = RiskAssessment()
 
     def submit_application(self, application: LoanApplication):

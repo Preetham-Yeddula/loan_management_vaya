@@ -8,16 +8,13 @@ class LoanRepository:
         self.data_store = data_store
 
     def save_application(self, application: LoanApplication):
-        self.data_store.add(str(application.id), application)
+        self.data_store.add({"_id": str(application.id), **application.__dict__})
 
     def get_application(self, application_id: UUID):
         application = self.data_store.get(str(application_id))
         if application:
-            return {"id": str(application_id), "status": application.status}
+            return {"id": str(application_id), "status": application}
         return None
 
     def update_application(self, application_id: UUID, application: LoanApplication):
-        self.data_store.update(str(application_id), application)
-
-    def delete_application(self, application_id: UUID):
-        self.data_store.remove(str(application_id))
+        self.data_store.update(str(application_id), application.__dict__)

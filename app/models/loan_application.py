@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from uuid import uuid4, UUID
 
 class LoanApplication(BaseModel):
-    id: UUID = Field(default_factory=uuid4)
+    id: int 
     name: str
     credit_score: int
     loan_amount: float

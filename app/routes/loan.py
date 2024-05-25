@@ -11,14 +11,9 @@ async def submit_application(application: LoanApplication):
     return controller.submit_application(application)
 
 @router.get("/status/{application_id}")
-async def get_application_status(application_id: UUID):
+async def get_application_status(application_id: int):
     return controller.get_application_status(application_id)
 
 @router.put("/update/{application_id}")
-async def update_application(application_id: UUID, updated_application: LoanApplication):
+async def update_application(application_id: int, updated_application: LoanApplication):
     return controller.update_application(application_id, updated_application)
-
-@router.delete("/delete/{application_id}")
-async def delete_application(application_id: UUID):
-    controller.delete_application(application_id)
-    return {"message": "Application deleted successfully"}
