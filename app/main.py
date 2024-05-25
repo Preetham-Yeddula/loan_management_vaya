@@ -3,6 +3,7 @@ from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 import time
 import json
+from app.routes import loan
 
 app = FastAPI()
 
@@ -20,6 +21,8 @@ class AddProcessTimeHeaderMiddleware(BaseHTTPMiddleware):
         return response
 
 app.add_middleware(AddProcessTimeHeaderMiddleware)
+
+app.include_router(loan.router, prefix="/loan", tags=["loan"])
 @app.get("/")
 async def root():
     return {"message": "Loan processing && management service"}
