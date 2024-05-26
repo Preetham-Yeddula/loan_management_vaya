@@ -46,7 +46,7 @@ Database is a free tier mongodb storage hosted on AWS
 
 Please reach out to me for access credentails to that DB cluster
 
-
+```
 app
 ├── Utils
 │   ├── DataStoreInterface.py
@@ -63,7 +63,7 @@ app
 │   └── loan.py
 └── services
     └── risk_assessment.py
-
+```
 loan_repository.py - accepts Objects of IDataStore(in DataStoreInterface) as input 
 loan_controller.py - injects that into loan_repository
 
