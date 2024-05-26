@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Jaya Deva\",\n    \"credit_score\": 750,\n    \"loan_amount\": 5000,\n    \"loan_purpose\": \"Home Improvement\",\n    \"income\": 600000,\n    \"employment_status\": \"Employed\"\n}",
+					"raw": "{\n    \"id\":67,\n    \"name\": \"Jaya Deva\",\n    \"credit_score\": 750,\n    \"loan_amount\": 5000,\n    \"loan_purpose\": \"Home Improvement\",\n    \"income\": 600000,\n    \"employment_status\": \"Employed\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -46,7 +46,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/loan/status/6ec33ab2-1823-4874-815e-89fc0eccd275",
+					"raw": "http://localhost:8000/loan/status/7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -55,7 +55,7 @@
 					"path": [
 						"loan",
 						"status",
-						"6ec33ab2-1823-4874-815e-89fc0eccd275"
+						"7"
 					]
 				}
 			},
@@ -73,7 +73,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Johnny Depp\",\n    \"credit_score\": 500,\n    \"loan_amount\": 1000088,\n    \"loan_purpose\": \"partying\",\n    \"income\": 650,\n    \"employment_status\": \"UnEmployed\"\n}",
+					"raw": "{\n    \"id\":7557,\n    \"name\": \"Johnny Depp\",\n    \"credit_score\": 5000,\n    \"loan_amount\": 1088,\n    \"loan_purpose\": \"partying\",\n    \"income\": 650000,\n    \"employment_status\": \"UnEmployed\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,7 +81,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/loan/update/6ec33ab2-1823-4874-815e-89fc0eccd275",
+					"raw": "http://localhost:8000/loan/update/67",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -90,7 +90,7 @@
 					"path": [
 						"loan",
 						"update",
-						"6ec33ab2-1823-4874-815e-89fc0eccd275"
+						"67"
 					]
 				}
 			},
