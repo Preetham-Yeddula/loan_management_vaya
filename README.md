@@ -22,6 +22,11 @@ Navigate to the project directory and install the Python dependencies using pip:
 cd loan_management_vaya
 pip install -r requirements.txt
 ```
+
+### 2.a Connection String
+
+The password for the connection string will be provided in the mail or chat of wellfound along with the submittion link
+
 ### 3. Run the Application
 
 Start the FastAPI application using the following command:
@@ -35,6 +40,12 @@ uvicorn app.main:app --reload
 Import the provided Postman collection to test REST APIs
 
 ## Structure
+
+Backend built using FastAPI framework of python
+Database is a free tier mongodb storage hosted on AWS
+
+Please reach out to me for access credentails to that DB cluster
+
 
 app
 ├── Utils
